@@ -1,3 +1,5 @@
+# Geforkt vom r/PlaceDE Repository
+
 # Overlay installieren
 
 1. https://www.tampermonkey.net/ öffnen
@@ -8,7 +10,7 @@
    
    ![Download-Fenster](img/tapermonkey-marker.png)
 
-3. Anschließend auf diesen Link klicken: https://github.com/PlaceDE-Official/place-overlay/raw/main/src/scripts/placeDE-overlay.user.js. Tampermonkey sollte das Skript erkennen.
+3. Anschließend auf diesen Link klicken: https://github.com/maxwai/place-overlay-Jinja/raw/main/src/scripts/Jinja-overlay.user.js. Tampermonkey sollte das Skript erkennen.
    
    ![Addon Tampermonkey](img/script-uebersicht.png)
    

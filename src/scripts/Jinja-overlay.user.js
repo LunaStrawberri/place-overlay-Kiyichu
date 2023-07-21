@@ -1,13 +1,13 @@
 // ==UserScript==
-// @name         r/placeDE Template
+// @name         Jinja Template
 // @namespace    http://tampermonkey.net/
-// @version      8.1
+// @version      1.0
 // @description  try to take over the canvas!
-// @author       placeDE Devs
+// @author       placeDE Devs, changed by maxwai
 // @match        https://garlic-bread.reddit.com/embed*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
-// @updateURL    https://github.com/PlaceDE-Official/place-overlay/raw/main/src/scripts/placeDE-overlay.user.js
-// @downloadURL  https://github.com/PlaceDE-Official/place-overlay/raw/main/src/scripts/placeDE-overlay.user.js
+// @updateURL    https://github.com/maxwai/place-overlay-Jinja/raw/main/src/scripts/Jinja-overlay.user.js
+// @downloadURL  https://github.com/maxwai/place-overlay-Jinja/raw/main/src/scripts/Jinja-overlay.user.js
 // ==/UserScript==
 
 var overlayImage = null;
@@ -22,7 +22,7 @@ if (window.top !== window.self) {
 }
 
 function updateImage() {
-    overlayImage.src = "https://place.army/overlay_target.png?" + Date.now()
+    overlayImage.src = "https://jinja.waideli.ch/jinja/overlay_target.png"
 }
 
-setInterval(function () {overlayImage.src = "https://place.army/overlay_target.png?" + Date.now()}, 30000);
+setInterval(function () {overlayImage.src = "https://jinja.waideli.ch/jinja/overlay_target.png"}, 30000);
