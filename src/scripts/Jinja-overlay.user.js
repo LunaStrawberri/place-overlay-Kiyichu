@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Jinja Template
 // @namespace    http://tampermonkey.net/
-// @version      1.4
+// @version      1.5
 // @description  try to take over the canvas!
 // @author       placeDE Devs, changed by maxwai
 // @match        https://garlic-bread.reddit.com/embed*
