@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Jinja Template
 // @namespace    http://tampermonkey.net/
-// @version      1.6
+// @version      1.7
 // @description  try to take over the canvas!
 // @author       placeDE Devs, changed by maxwai
 // @match        https://garlic-bread.reddit.com/embed*
@@ -11,19 +11,46 @@
 // @run-at   document-start
 // ==/UserScript==
 
-var overlayImage = null;
+const updateEvery = 30 * 1000;
+const src = "https://jinja.waideli.ch/jinja/overlay_target.png";
+const style =
+  "position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 1000px;height: 1000px;";
+
+let overlayImage = null;
 if (window.top !== window.self) {
-    window.addEventListener('load', () => {
-        const canvasContainer = document.querySelector("garlic-bread-embed").shadowRoot.querySelector("div.layout").querySelector("garlic-bread-canvas").shadowRoot.querySelector("div.container");
-        overlayImage = document.createElement("img");
-        updateImage();
-        overlayImage.style = `position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 2500px;height: 2000px;pointerEvents: 'none';`;
-        canvasContainer.appendChild(overlayImage);
-    }, false);
-}
+  window.addEventListener(
+    "load",
+    () => {
+      const canvasContainer = document
+        .querySelector("garlic-bread-embed")
+        .shadowRoot.querySelector("garlic-bread-canvas")
+        .shadowRoot.querySelector(".container");
+      const canvas = canvasContainer.querySelector("canvas");
 
-function updateImage() {
-    overlayImage.src = "https://jinja.waideli.ch/jinja/overlay_target.png"
-}
+      overlayImage = document.createElement("img");
+      overlayImage.style = style;
 
-setInterval(function () {overlayImage.src = "https://jinja.waideli.ch/jinja/overlay_target.png"}, 30000);
+      const updateImage = () => (overlayImage.src = src + "?" + Date.now());
+
+      updateImage();
+      setInterval(updateImage, updateEvery);
+      canvasContainer.appendChild(overlayImage);
+
+      const canvasObserver = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === "attributes") {
+            overlayImage.style.width =
+              mutation.target.getAttribute("width") + "px";
+            overlayImage.style.height =
+              mutation.target.getAttribute("height") + "px";
+          }
+        });
+      });
+
+      canvasObserver.observe(canvas, {
+        attributes: true,
+      });
+    },
+    false
+  );
+}
