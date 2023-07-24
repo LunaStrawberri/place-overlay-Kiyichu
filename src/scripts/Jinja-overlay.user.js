@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name         Jinja Template
 // @namespace    http://tampermonkey.net/
-// @version      1.5
+// @version      1.6
 // @description  try to take over the canvas!
 // @author       placeDE Devs, changed by maxwai
 // @match        https://garlic-bread.reddit.com/embed*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
 // @updateURL    https://github.com/maxwai/place-overlay-Jinja/raw/main/src/scripts/Jinja-overlay.user.js
 // @downloadURL  https://github.com/maxwai/place-overlay-Jinja/raw/main/src/scripts/Jinja-overlay.user.js
+// @run-at   document-start
 // ==/UserScript==
 
 var overlayImage = null;
