@@ -10,7 +10,7 @@
    
    ![Download-Fenster](img/tapermonkey-marker.png)
 
-3. Anschließend auf diesen Link klicken: https://github.com/maxwai/place-overlay-Jinja/raw/main/src/scripts/Jinja-overlay.user.js. Tampermonkey sollte das Skript erkennen.
+3. Anschließend auf diesen Link klicken: https://github.com/LunaStrawberri/place-overlay-Kiyichu/raw/main/src/scripts/Kiyichu-overlay.user.js. Tampermonkey sollte das Skript erkennen.
    
    ![Addon Tampermonkey](img/script-uebersicht.png)
    
