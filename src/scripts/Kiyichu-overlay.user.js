@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kiyichu Template
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  try to take over the canvas!
 // @author       placeDE Devs, changed by maxwai, changed again by LunaStrawberri
 // @match        https://garlic-bread.reddit.com/embed*
@@ -12,7 +12,7 @@
 // ==/UserScript==
 
 const updateEvery = 30 * 1000;
-const src = "https://cdn.discordapp.com/attachments/328830025690251274/1133407493935087636/overlay_target.png";
+const src = "https://raw.githubusercontent.com/LunaStrawberri/place-overlay-Kiyichu/main/src/image/overlay_target.png";
 const style =
   "position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 1000px;height: 1000px;";
 
