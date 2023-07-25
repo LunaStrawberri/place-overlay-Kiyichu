@@ -1,18 +1,18 @@
 // ==UserScript==
-// @name         Jinja Template
+// @name         Kiyichu Template
 // @namespace    http://tampermonkey.net/
-// @version      1.7
+// @version      1.0
 // @description  try to take over the canvas!
-// @author       placeDE Devs, changed by maxwai
+// @author       placeDE Devs, changed by maxwai, changed again by LunaStrawberri
 // @match        https://garlic-bread.reddit.com/embed*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
-// @updateURL    https://github.com/maxwai/place-overlay-Jinja/raw/main/src/scripts/Jinja-overlay.user.js
-// @downloadURL  https://github.com/maxwai/place-overlay-Jinja/raw/main/src/scripts/Jinja-overlay.user.js
+// @updateURL    https://github.com/LunaStrawberri/place-overlay-Kiyichu/raw/main/src/scripts/Kiyichu-overlay.user.js
+// @downloadURL  https://github.com/LunaStrawberri/place-overlay-Kiyichu/raw/main/src/scripts/Kiyichu-overlay.user.js
 // @run-at   document-start
 // ==/UserScript==
 
 const updateEvery = 30 * 1000;
-const src = "https://jinja.waideli.ch/jinja/overlay_target.png";
+const src = "https://cdn.discordapp.com/attachments/328830025690251274/1133407493935087636/overlay_target.png";
 const style =
   "position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 1000px;height: 1000px;";
 
